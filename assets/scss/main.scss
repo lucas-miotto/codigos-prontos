@@ -1,0 +1,34 @@
+// Arquivo main importa todos
+@import "patterns/reset";
+@import "patterns/vars";
+@import "patterns/mixin";
+@import "patterns/clearfix";
+@import "geral.scss";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	font-family: $font-light;
+
+	color: $color-p2;
+
+	@media (max-width: 600px) {
+		font-size: 16px;
+	}
+}
+
+// @media (max-width: 1366px) {}
+
+// @media (max-width: 1000px) {}
+
+// @media (max-width: 800px) {}
+
+// @media (max-width: 600px) {}
+
+// @media (max-width: 400px) {}

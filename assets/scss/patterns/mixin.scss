@@ -1,0 +1,218 @@
+/*
+  Centraliza
+*/
+@mixin centraliza-absolute($valorX: -50%, $valorY: -50%) {
+	-webkit-transform: translateX($valorX) translateY($valorY);
+	-moz-transform: translateX($valorX) translateY($valorY);
+	-ms-transform: translateX($valorX) translateY($valorY);
+	-o-transform: translateX($valorX) translateY($valorY);
+	transform: translateX($valorX) translateY($valorY);
+	position: absolute;
+}
+
+/*
+ Calculo automatico da largura
+*/
+@mixin largura-responsiva($elementoLargura, $containerLargura) {
+	width: calc((#{$elementoLargura} / #{$containerLargura}) * 100%);
+}
+
+/*
+ Margins e paddins responsivos
+*/
+@mixin p-bottom($valor) {
+	$valorAtual: $valor;
+	padding-bottom: $valorAtual;
+
+	@media (max-width: 1366px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		padding-bottom: $valorAtual;
+	}
+	@media (max-width: 1100px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		padding-bottom: $valorAtual;
+	}
+	@media (max-width: 900px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		padding-bottom: $valorAtual;
+	}
+	@media (max-width: 600px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		padding-bottom: $valorAtual;
+	}
+	@media (max-width: 450px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.3);
+		padding-bottom: $valorAtual;
+	}
+}
+@mixin p-top($valor) {
+	$valorAtual: $valor;
+	padding-top: $valorAtual;
+
+	@media (max-width: 1366px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		padding-top: $valorAtual;
+	}
+	@media (max-width: 1100px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		padding-top: $valorAtual;
+	}
+	@media (max-width: 900px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		padding-top: $valorAtual;
+	}
+	@media (max-width: 600px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		padding-top: $valorAtual;
+	}
+	@media (max-width: 450px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.3);
+		padding-top: $valorAtual;
+	}
+}
+@mixin m-bottom($valor) {
+	$valorAtual: $valor;
+	margin-bottom: $valorAtual;
+
+	@media (max-width: 1366px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		margin-bottom: $valorAtual;
+	}
+	@media (max-width: 1100px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		margin-bottom: $valorAtual;
+	}
+	@media (max-width: 900px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		margin-bottom: $valorAtual;
+	}
+	@media (max-width: 600px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		margin-bottom: $valorAtual;
+	}
+	@media (max-width: 450px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.3);
+		margin-bottom: $valorAtual;
+	}
+}
+
+@mixin m-top($valor) {
+	$valorAtual: $valor;
+	margin-top: $valorAtual;
+
+	@media (max-width: 1366px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		margin-top: $valorAtual;
+	}
+	@media (max-width: 1100px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		margin-top: $valorAtual;
+	}
+	@media (max-width: 900px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		margin-top: $valorAtual;
+	}
+	@media (max-width: 600px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.2);
+		margin-top: $valorAtual;
+	}
+	@media (max-width: 450px) {
+		$valorAtual: $valorAtual - ($valorAtual * 0.3);
+		margin-top: $valorAtual;
+	}
+}
+
+/*
+	Font size responsiva para titulos. De 33 a 99;
+*/
+@mixin font-title-responsiva($font-size) {
+	$font-atual: $font-size;
+	font-size: $font-atual;
+
+	@media (max-width: 1366px) {
+		$font-atual: calc(#{$font-size} * 0.9);
+		font-size: $font-atual;
+	}
+	@media (max-width: 1100px) {
+		$font-atual: calc(#{$font-size} * 0.8);
+		font-size: $font-atual;
+	}
+	@media (max-width: 900px) {
+		$font-atual: calc(#{$font-size} * 0.7);
+		font-size: $font-atual;
+	}
+	@media (max-width: 600px) {
+		$font-atual: calc(#{$font-size} * 0.6);
+		font-size: $font-atual;
+	}
+	@media (max-width: 450px) {
+		$font-atual: calc(#{$font-size} * 0.55);
+		font-size: $font-atual;
+	}
+}
+
+/*
+	Font size responsiva para subtitulos. De 24 a 32;
+*/
+@mixin font-subtitle-responsiva($font-size) {
+	$font-atual: $font-size;
+	font-size: $font-atual;
+
+	@media (max-width: 1366px) {
+		$font-atual: calc(#{$font-size} * 0.95);
+		font-size: $font-atual;
+	}
+	@media (max-width: 1100px) {
+		$font-atual: calc(#{$font-size} * 0.9);
+		font-size: $font-atual;
+	}
+	@media (max-width: 900px) {
+		$font-atual: calc(#{$font-size} * 0.85);
+		font-size: $font-atual;
+	}
+	@media (max-width: 600px) {
+		$font-atual: calc(#{$font-size} * 0.8);
+		font-size: $font-atual;
+	}
+	@media (max-width: 450px) {
+		$font-atual: calc(#{$font-size} * 0.75);
+		font-size: $font-atual;
+	}
+}
+
+/*
+	Font size responsiva para paragrafo. De 18 a 24;
+*/
+@mixin font-paragraph-responsiva($font-size) {
+	$font-atual: $font-size;
+	font-size: $font-atual;
+
+	@media (max-width: 1366px) {
+		$font-atual: calc(#{$font-size} * 0.97);
+		font-size: $font-atual;
+	}
+	@media (max-width: 1100px) {
+		$font-atual: calc(#{$font-size} * 0.93);
+		font-size: $font-atual;
+	}
+	@media (max-width: 900px) {
+		$font-atual: calc(#{$font-size} * 0.9);
+		font-size: $font-atual;
+	}
+	@media (max-width: 600px) {
+		$font-atual: calc(#{$font-size} * 0.87);
+		font-size: $font-atual;
+	}
+	@media (max-width: 450px) {
+		$font-atual: calc(#{$font-size} * 0.85);
+		font-size: $font-atual;
+	}
+}
+
+//mixins simples para adicionar animacoes nos elementos.
+@mixin animation {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
