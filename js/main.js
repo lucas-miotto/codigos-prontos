@@ -118,7 +118,6 @@ $(document).ready(function () {
 
 // transoformar imagens em background. Basta adicionar a classe .loader no container das imagens.
 function backgroundFigure() {
-
 	var allFigures = $('.loader');
 
 	allFigures.find('figure').each(function (index, element) {
