@@ -556,7 +556,7 @@ function loginSimple() {
 	username = username.toLowerCase();
 	var password = document.login.password.value;
 	password = password.toLowerCase();
-	if (username == "gebb" && password == "gebb123") {
+	if (username == "" && password == "") {
 		$(".login-download").remove();
 		createCookie("login-feito", 1, 1);
 		done = 1;
